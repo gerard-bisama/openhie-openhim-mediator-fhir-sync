@@ -12,8 +12,8 @@ cd /home/ fhirmediator
 mkdir config
 cp  /thelocationofyoursourcecode/fhirmediator.properties  /home/mediator/config/
 cp  /thelocationofyoursourcecode/fhirmediator_sync.properties  /home/mediator/config/
- sudo usermod -a -G youruser fhirmediator
- sudo chown -R fhirmediator:yourusergroup /home/fhirmediator/config/
+sudo usermod -a -G youruser fhirmediator
+sudo chown -R fhirmediator:yourusergroup /home/fhirmediator/config/
  ```
 
 Open the hirmediator.properties and change the value according to your confifuration (baseUrl, servers port,minimun limit date for your first synchronization)
@@ -34,7 +34,7 @@ The JPA server will run on the port 8082 but if Ones needs to change this value.
 1. To install the mediator, download the source files from the openhie-openhim-mediator-fhir-sync repository. Enter in the openhim-mediator-hapifhir and generate the jar file.
 
 ```sh
-Cd  /thelocationofyoursourcecode/ openhim-mediator-hapifhir
+cd  /thelocationofyoursourcecode/ openhim-mediator-hapifhir
 mvn install
 java -jar target/fhir-mediator-0.1.0-jar-with-dependencies.jar
 ```
