@@ -47,7 +47,7 @@ mvn install
 mvn jetty:run
 ```
 
-#Getting started guide
+#Launch the synchronization
 To run the synchronization of data, run the command
 ```sh
  curl -k -u clientuser:clientgroup https://localhost:5000/synchronize/2016-10-12T01:01:01
