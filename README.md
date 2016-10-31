@@ -46,6 +46,7 @@ cd /thelocationofyoursourcecode /hapi-fhir-jpaserver-local
 mvn install
 mvn jetty:run
 ```
+Then, the Fhir local server can be accessed on http://localhost:8082/hapi-fhir-jpaserver-local (localhost: can be replaced by a public IP address)
 
 #Launch the synchronization
 To run the synchronization of data, run the command
