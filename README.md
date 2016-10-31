@@ -1,6 +1,6 @@
 # openhie-openhim-mediator-fhir-sync
 The mediator synchronizes data between two fhir repository servers.
-It pulls Practitioner from a first server (Public Test Serve : http://fhirtest.uhn.ca/ or any type of Restful FHIR Server), validate them and push them it the local FHIR JPA Server that stores   resource on the local database (MySQL). The data model format is based on STU3.
+It pulls Practitioner resources from a first server (Public Test Serve : http://fhirtest.uhn.ca/ or any type of Restful FHIR Server), validate them and push them it the local FHIR JPA Server that stores   resource on the local database (MySQL). The data model format is based on STU3.
 Practitioner covers all individuals who are engaged in the healthcare process and healthcare-related services as part of their formal responsibilities and this Resource is used for attribution of activities and responsibilities to these individuals.
 
 #Getting started guide
@@ -16,9 +16,9 @@ sudo usermod -a -G youruser fhirmediator
 sudo chown -R fhirmediator:yourusergroup /home/fhirmediator/config/
  ```
 
-Open the hirmediator.properties and change the value according to your confifuration (baseUrl, servers port,minimun limit date for your first synchronization)
+Open the hirmediator.properties and change the value according to your configuration (baseUrl, servers port,minimun limit date for your first synchronization)
 
-The mediator will automatically install 1 channel (mainfhir-mediator-channel) to control the synchronisation, you must also configure these channels to suit your needs. In later versions of the OpenHIM (after 1.5.1) these will not be installed automatically, you will need to manually install these channels by navigating to Mediators > mHero Mediator and clikcing the little + button next to each channel listed under the 'Default channels' section.
+The mediator will automatically install 1 channel (mainfhir-mediator-channel) to control the synchronisation, you must also configure these channels to suit your needs. In later versions of the OpenHIM (after 1.5.1) these will not be installed automatically, you will need to manually install these channels by navigating to Mediators > openhim-mediator-hapifhir Mediator and clikcing the little + button next to the channel listed under the 'Default channels' section.
 
 2. To make the JPA server working you need to create a new mysql data base the change the configuration files of JPA local server
 Open the file FhirServerConfigDstu3.java, locate the code the public DataSource dataSource(), then  replace the lines below to the corresponding values.
